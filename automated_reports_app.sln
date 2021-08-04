@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "automated_reports_app", "automated_reports_app\automated_reports_app.vbproj", "{8D390355-7A60-48A0-A0ED-4B6F60DDB884}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D390355-7A60-48A0-A0ED-4B6F60DDB884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D390355-7A60-48A0-A0ED-4B6F60DDB884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D390355-7A60-48A0-A0ED-4B6F60DDB884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D390355-7A60-48A0-A0ED-4B6F60DDB884}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C23E339F-A955-49FC-B637-B6E0BD0A380E}
+	EndGlobalSection
+EndGlobal

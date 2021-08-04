@@ -1,0 +1,5 @@
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.vbprojAssemblyReference.cache
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.frmMain.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.Resources.resources
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.vbproj.GenerateResource.cache
+C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.vbproj.CoreCompileInputs.cache
