@@ -6,6 +6,27 @@ Public Class frmMain
     Dim intElapsedTimeRunReport As Integer = 0
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        tmrCheckIfReportRun.Enabled = True
+        tmrUpdateLocalConfig.Enabled = True
+
+        If (My.Computer.FileSystem.FileExists("ReportFlags.csv") = False) Then
+
+            ' create the record file if it doesn't exist
+            WriteCSVFile()
+
+        Else
+
+            ' read in the CSV file
+            ReadCSVFile()
+
+        End If
+
+    End Sub
+
+    Private Sub frmMain_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+
+        Me.Visible = False
+
     End Sub
 
     ' ┍━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┑
