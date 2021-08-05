@@ -1,4 +1,6 @@
-﻿Public Class frmMain
+﻿
+
+Public Class frmMain
 
     Dim intElapsedTimeUpdateConfig As Integer = 1000000
     Dim intElapsedTimeRunReport As Integer = 0
@@ -45,7 +47,7 @@
                 ' Init data reader
                 Dim drSourceTable As OleDb.OleDbDataReader
                 ' Init data table
-                Dim dt As DataTable = New DataTable
+                Dim dt As Data.DataTable = New Data.DataTable
 
                 ' Build the select statement
                 strSelect = "SELECT * FROM TReports"
