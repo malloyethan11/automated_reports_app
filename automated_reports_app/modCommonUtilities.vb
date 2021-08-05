@@ -1,6 +1,8 @@
 ﻿Imports Excel = Microsoft.Office.Interop.Excel
 Imports System.Net.Mail
 Imports DataTable = System.Data.DataTable
+Imports Point = System.Drawing.Point
+Imports Button = System.Windows.Forms.Button
 
 Module modCommonUtilities
 
@@ -1037,4 +1039,24 @@ Module modCommonUtilities
         End Try
     End Function
 
+    Public Sub ButtonColor(ByVal pntPosition As Point, ByRef btnItemLookup As Button, ByVal frmMe As Form, ByVal btmButtonGray As Bitmap, ByVal btmButton As Bitmap, Optional ByVal intUpperOffset As Integer = -9, Optional ByVal intLowerOffset As Integer = -8)
+
+        If (MouseIsHovering(pntPosition, btnItemLookup, frmMe, intUpperOffset, intLowerOffset) And frmMe.ContainsFocus = True) Then
+            btnItemLookup.Image = btmButtonGray
+        Else
+            btnItemLookup.Image = btmButton
+        End If
+
+    End Sub
+
+    Public Function MouseIsHovering(ByVal MousePosition As Point, ByRef ctlControl As Control, ByRef frmForm As Form, Optional ByVal intUpperOffset As Integer = -9, Optional ByVal intLowerOffset As Integer = -8)
+
+        ' This if statement adapted from the Waveslash game launch I made for my latest game: https://gravityhamster.itch.io/waveslash
+        If (MousePosition.X > ctlControl.Left + frmForm.Left And MousePosition.X < ctlControl.Right + frmForm.Left) And (MousePosition.Y > ctlControl.Top + frmForm.Top + ctlControl.Height + intUpperOffset And MousePosition.Y < ctlControl.Bottom + frmForm.Top + ctlControl.Height + intLowerOffset) Then
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
 End Module
