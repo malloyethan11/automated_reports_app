@@ -41,7 +41,7 @@
                 strConnectionPassword = strTempPassword
 
                 ' Test connection
-                If OpenDatabaseConnectionSQLServer() = False Then
+                If OpenDatabaseConnectionSQLServer(True) = False Then
 
                     CloseDatabaseConnection()
                     Console.WriteLine("Unable to connect to database at this time. Either enter new credentials or close the program and try again later.", "Error")
@@ -65,7 +65,7 @@
                 Else
 
                     CloseDatabaseConnection()
-                    OpenFormKillParent(Me, frmLogin)
+                    OpenFormKillParent(Me, frmMain)
 
                     SetImages()
 
@@ -133,54 +133,6 @@
             Next
         Next
 
-        x = btmButtonLittleLong.Width
-        y = btmButtonLittleLong.Height
-        btmButtonLittleLongGray = New Bitmap(btmButtonLittleLong.Width, btmButtonLittleLong.Height)
-
-        For x = 0 To (btmButtonLittleLong.Width) - 1
-            For y = 0 To (btmButtonLittleLong.Height) - 1
-                Dim c As Color = btmButtonLittleLong.GetPixel(x, y)
-                Dim r As Integer = c.R
-                Dim g As Integer = c.G
-                Dim b As Integer = c.B
-                Dim a As Integer = c.A
-                Dim d As Integer = (r + g + b) \ 3
-                btmButtonLittleLongGray.SetPixel(x, y, Color.FromArgb(a, d, d, d))
-            Next
-        Next
-
-        x = btmButtonShort.Width
-        y = btmButtonShort.Height
-        btmButtonShortGray = New Bitmap(btmButtonShort.Width, btmButtonShort.Height)
-
-        For x = 0 To (btmButtonShort.Width) - 1
-            For y = 0 To (btmButtonShort.Height) - 1
-                Dim c As Color = btmButtonShort.GetPixel(x, y)
-                Dim r As Integer = c.R
-                Dim g As Integer = c.G
-                Dim b As Integer = c.B
-                Dim a As Integer = c.A
-                Dim d As Integer = (r + g + b) \ 3
-                btmButtonShortGray.SetPixel(x, y, Color.FromArgb(a, d, d, d))
-            Next
-        Next
-
-        x = btmSkinnyButton.Width
-        y = btmSkinnyButton.Height
-        btmSkinnyButtonGray = New Bitmap(btmSkinnyButton.Width, btmSkinnyButton.Height)
-
-        For x = 0 To (btmSkinnyButton.Width) - 1
-            For y = 0 To (btmSkinnyButton.Height) - 1
-                Dim c As Color = btmSkinnyButton.GetPixel(x, y)
-                Dim r As Integer = c.R
-                Dim g As Integer = c.G
-                Dim b As Integer = c.B
-                Dim a As Integer = c.A
-                Dim d As Integer = (r + g + b) \ 3
-                btmSkinnyButtonGray.SetPixel(x, y, Color.FromArgb(a, d, d, d))
-            Next
-        Next
-
     End Sub
 
     Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
@@ -206,7 +158,7 @@
 
 
         ' Open the DB
-        If OpenDatabaseConnectionSQLServer() = False Then
+        If OpenDatabaseConnectionSQLServer(False) = False Then
 
             CloseDatabaseConnection()
             Console.WriteLine("Unable to connect to database. Please try again.", "Error")
@@ -215,7 +167,7 @@
 
             My.Computer.FileSystem.WriteAllText("dbcred.txt", clsEncrypt.EncryptData(strConnectionUsername + "|" + strConnectionPassword), False)
             CloseDatabaseConnection()
-            OpenFormKillParent(Me, frmLogin)
+            OpenFormKillParent(Me, frmMain)
 
         End If
 

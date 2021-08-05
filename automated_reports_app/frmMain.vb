@@ -6,6 +6,8 @@ Public Class frmMain
     Dim intElapsedTimeRunReport As Integer = 0
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        'frmGetDatabaseCredentials.Show()
+
         tmrCheckIfReportRun.Enabled = True
         tmrUpdateLocalConfig.Enabled = True
 
