@@ -22,6 +22,9 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Me.tmrUpdateLocalConfig = New System.Windows.Forms.Timer(Me.components)
+        Me.tmrCheckIfReportRun = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'frmMain
@@ -35,8 +38,8 @@ Partial Class frmMain
 
     End Sub
 
+
+    Friend WithEvents tmrUpdateButtonImage As Timer
     Friend WithEvents tmrUpdateLocalConfig As Timer
     Friend WithEvents tmrCheckIfReportRun As Timer
-    Friend WithEvents tmrUpdateButtonImage As Timer
-
 End Class
