@@ -775,7 +775,7 @@ Public Class frmMain
         If (TaxDailyFlag = True) Then
 
             ' Okay, we're in. Run the report in quiet mode
-            Dim blnResult As Boolean = RunTaxReport(Me, True, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Year)
+            Dim blnResult As Boolean = RunTaxReport(Me, True, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day)
 
             GC.Collect()
             GC.WaitForPendingFinalizers()
@@ -832,7 +832,7 @@ Public Class frmMain
         If (TaxWeeklyFlag = True) Then
 
             ' Okay, we're in. Run the report in quiet mode
-            Dim blnResult As Boolean = RunTaxReport(Me, True, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Year)
+            Dim blnResult As Boolean = RunTaxReport(Me, True, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day)
 
             GC.Collect()
             GC.WaitForPendingFinalizers()
@@ -897,7 +897,7 @@ Public Class frmMain
         If (TaxMonthlyFlag = True) Then
 
             ' Okay, we're in. Run the report in quiet mode
-            Dim blnResult As Boolean = RunTaxReport(Me, True, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Year)
+            Dim blnResult As Boolean = RunTaxReport(Me, True, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day)
 
             GC.Collect()
             GC.WaitForPendingFinalizers()
@@ -962,7 +962,7 @@ Public Class frmMain
         If (TaxYearlyFlag = True) Then
 
             ' Okay, we're in. Run the report in quiet mode
-            Dim blnResult As Boolean = RunTaxReport(Me, True, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Year)
+            Dim blnResult As Boolean = RunTaxReport(Me, True, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day)
 
             GC.Collect()
             GC.WaitForPendingFinalizers()
@@ -1023,7 +1023,7 @@ Public Class frmMain
         If (DepositDailyFlag = True) Then
 
             ' Okay, we're in. Run the report in quiet mode
-            Dim blnResult As Boolean = RunCashCreditReport(Me, True, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Year)
+            Dim blnResult As Boolean = RunCashCreditReport(Me, True, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day)
 
             GC.Collect()
             GC.WaitForPendingFinalizers()
@@ -1080,7 +1080,7 @@ Public Class frmMain
         If (DepositWeeklyFlag = True) Then
 
             ' Okay, we're in. Run the report in quiet mode
-            Dim blnResult As Boolean = RunCashCreditReport(Me, True, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Year)
+            Dim blnResult As Boolean = RunCashCreditReport(Me, True, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day)
 
             GC.Collect()
             GC.WaitForPendingFinalizers()
@@ -1145,7 +1145,7 @@ Public Class frmMain
         If (DepositMonthlyFlag = True) Then
 
             ' Okay, we're in. Run the report in quiet mode
-            Dim blnResult As Boolean = RunCashCreditReport(Me, True, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Year)
+            Dim blnResult As Boolean = RunCashCreditReport(Me, True, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day)
 
             GC.Collect()
             GC.WaitForPendingFinalizers()
@@ -1210,7 +1210,7 @@ Public Class frmMain
         If (DepositYearlyFlag = True) Then
 
             ' Okay, we're in. Run the report in quiet mode
-            Dim blnResult As Boolean = RunCashCreditReport(Me, True, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Year)
+            Dim blnResult As Boolean = RunCashCreditReport(Me, True, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day)
 
             GC.Collect()
             GC.WaitForPendingFinalizers()
