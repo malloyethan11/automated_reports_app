@@ -19,7 +19,6 @@ D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\bin\Deb
 D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\bin\Debug\Reports Generation Module.exe
 D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\bin\Debug\Reports Generation Module.pdb
 D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\bin\Debug\Reports Generation Module.xml
-D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.vbprojAssemblyReference.cache
 D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.vbproj.ResolveComReference.cache
 D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.frmGetDatabaseCredentials.resources
 D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.frmMain.resources
