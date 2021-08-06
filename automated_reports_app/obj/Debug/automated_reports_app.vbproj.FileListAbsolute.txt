@@ -15,3 +15,17 @@ C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyeth
 C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.xml
 C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.pdb
 C:\Users\mallo\OneDrive\Documents\SCHOOL STUFF\05 Summer 2021\Capstone\malloyethan11\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.frmGetDatabaseCredentials.resources
+D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\bin\Debug\Reports Generation Module.exe.config
+D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\bin\Debug\Reports Generation Module.exe
+D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\bin\Debug\Reports Generation Module.pdb
+D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\bin\Debug\Reports Generation Module.xml
+D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.vbprojAssemblyReference.cache
+D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.vbproj.ResolveComReference.cache
+D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.frmGetDatabaseCredentials.resources
+D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.frmMain.resources
+D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.Resources.resources
+D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.vbproj.GenerateResource.cache
+D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\obj\Debug\automated_reports_app.vbproj.CoreCompileInputs.cache
+D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\obj\Debug\Reports Generation Module.exe
+D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\obj\Debug\Reports Generation Module.xml
+D:\College Homework\CAPSTONE\automated_reports_app\automated_reports_app\obj\Debug\Reports Generation Module.pdb
