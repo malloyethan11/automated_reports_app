@@ -244,20 +244,21 @@ Module modCommonUtilities
             'Dim drSourceTable As OleDb.OleDbDataReader
             Dim dt As DataTable = New DataTable
             Dim objResults As Object
+            Dim strReportDate As String
             Dim dblOhioTaxRate As Double = 7.8
             Dim intGrossSalesQty As Integer
             Dim dblGrossSalesTotal As Double
-            'Dim dblGrossSalesAvg As Double
+            Dim dblGrossSalesAvg As Double
             Dim intReturnsQty As Integer
             Dim dblReturnsTotal As Double
-            'Dim dblReturnsAvg As Double
+            Dim dblReturnsAvg As Double
             Dim intNetSalesQty As Integer
             Dim dblNetSalesTotal As Double
-            'Dim dblNetSalesAvg As Double
+            Dim dblNetSalesAvg As Double
             Dim dblTaxesTotal As Double
             Dim intTicketTotalQty As Integer
             Dim dblTicketTotalTotal As Double
-            'Dim dblTicketTotalAvg As Double
+            Dim dblTicketTotalAvg As Double
             Dim intPaymentsWithCash As Integer
             Dim intPaymentsWithCredit As Integer
             Dim dblCashAmount As Double
@@ -288,6 +289,9 @@ Module modCommonUtilities
                 Exit Try
 
             End If
+
+            ' Assemble report date
+            strReportDate = strYear & "-" & strMonth & "-" & strDay
 
             ' BUILD THE SELECT STATEMENTS
 
@@ -516,12 +520,39 @@ Module modCommonUtilities
             End If
 
 
+            ' assign value to variables holding averages and handle divide by zero situations
+            If dblGrossSalesTotal > 0 Then
+                dblGrossSalesAvg = dblGrossSalesTotal / intGrossSalesQty
+            ElseIf dblGrossSalesTotal = 0 Then
+                dblGrossSalesAvg = 0
+            End If
+
+            If dblReturnsTotal > 0 Then
+                dblReturnsAvg = dblReturnsTotal / intReturnsQty
+            ElseIf dblReturnsTotal = 0 Then
+                dblReturnsAvg = 0
+            End If
+
+            If dblNetSalesTotal > 0 Then
+                dblNetSalesAvg = dblNetSalesTotal / intNetSalesQty
+            ElseIf dblNetSalesTotal = 0 Then
+                dblNetSalesAvg = 0
+            End If
+
+            dblTicketTotalTotal = dblNetSalesTotal + dblTaxesTotal
+            If dblTicketTotalTotal > 0 Then
+                dblTicketTotalAvg = dblTicketTotalTotal / intTicketTotalQty
+            ElseIf dblTicketTotalTotal = 0 Then
+                dblTicketTotalAvg = 0
+            End If
+
+
             ' add table headers going cell by cell
             ExcelWkSht.Cells(1, 1) = "TRINITY CHURCH SUPPLY"
             ExcelWkSht.Cells(2, 1) = "5479 NORTH BEND RD."
             ExcelWkSht.Cells(3, 1) = "CINCINNATI, OH 45247"
             ExcelWkSht.Cells(1, 10) = "Store Summary"
-            ExcelWkSht.Cells(2, 10) = System.DateTime.Now.ToString
+            ExcelWkSht.Cells(2, 10) = strReportDate
 
             ExcelWkSht.Cells(5, 2) = "Quantity"
             ExcelWkSht.Cells(5, 3) = "Total"
@@ -529,22 +560,22 @@ Module modCommonUtilities
             ExcelWkSht.Cells(6, 1) = "GROSS SALES"
             ExcelWkSht.Cells(6, 2) = intGrossSalesQty
             ExcelWkSht.Cells(6, 3) = dblGrossSalesTotal
-            ExcelWkSht.Cells(6, 4) = (dblGrossSalesTotal / intGrossSalesQty)
+            ExcelWkSht.Cells(6, 4) = dblGrossSalesAvg
             ExcelWkSht.Cells(7, 1) = "Gross Returns"
             ExcelWkSht.Cells(7, 2) = intReturnsQty
             ExcelWkSht.Cells(7, 3) = dblReturnsTotal
-            ExcelWkSht.Cells(7, 4) = (dblReturnsTotal / intReturnsQty)
+            ExcelWkSht.Cells(7, 4) = dblReturnsAvg
             ExcelWkSht.Cells(8, 1) = "NET SALES"
             ExcelWkSht.Cells(8, 2) = intNetSalesQty
             ExcelWkSht.Cells(8, 3) = dblNetSalesTotal
-            ExcelWkSht.Cells(8, 4) = (dblNetSalesTotal / intNetSalesQty)
+            ExcelWkSht.Cells(8, 4) = dblNetSalesAvg
             ExcelWkSht.Cells(9, 1) = "Taxes"
             ExcelWkSht.Cells(9, 3) = dblTaxesTotal
             ExcelWkSht.Cells(10, 1) = "TICKET TOTAL"
             ExcelWkSht.Cells(10, 2) = intTicketTotalQty
             dblTicketTotalTotal = dblNetSalesTotal + dblTaxesTotal
             ExcelWkSht.Cells(10, 3) = dblTicketTotalTotal
-            ExcelWkSht.Cells(10, 4) = (dblTicketTotalTotal / intTicketTotalQty)
+            ExcelWkSht.Cells(10, 4) = dblTicketTotalAvg
 
             ExcelWkSht.Cells(12, 1) = "PAYMENT TYPES"
             ExcelWkSht.Cells(12, 2) = "Quantity"
@@ -553,11 +584,11 @@ Module modCommonUtilities
             ExcelWkSht.Cells(13, 1) = "Cash"
             ExcelWkSht.Cells(13, 2) = intPaymentsWithCash
             ExcelWkSht.Cells(13, 3) = dblCashAmount
-            ExcelWkSht.Cells(13, 4) = dblTotalCash
+            ExcelWkSht.Cells(13, 4) = dblCashAmount ' total cash includes tips, but we don't accept tips, so dblCashAmount is always the same as the total cash
             ExcelWkSht.Cells(14, 1) = "Credit Card"
             ExcelWkSht.Cells(14, 2) = intPaymentsWithCredit
             ExcelWkSht.Cells(14, 3) = dblCreditAmount
-            ExcelWkSht.Cells(14, 4) = dblTotalCredit
+            ExcelWkSht.Cells(14, 4) = dblCreditAmount ' total credit includes tips, but we don't accept tips, so dblCashAmount is always the same as the total credit
 
             ExcelWkSht.Cells(16, 2) = "Quantity"
             ExcelWkSht.Cells(16, 3) = "Amount"
