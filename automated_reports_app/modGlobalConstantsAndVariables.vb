@@ -92,4 +92,8 @@
     Public dtmYearlyInventoryReport As DateTime
     Public dtmYearlyDepositReport As DateTime
 
+    Public btmButtonDefault As Bitmap = My.Resources.Button
+    Public btmButtonDefaultGray As Bitmap = My.Resources.Button
+
+
 End Module
